@@ -1,0 +1,19 @@
+{
+  "cSpell.words": ["alertron", "helpdesk", "jsdude", "mahabubsany", "phitron"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.sortImports": true,
+  "typescript.preferences.importSortOrder": "alphabetical"
+}
