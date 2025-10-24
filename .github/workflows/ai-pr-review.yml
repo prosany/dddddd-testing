@@ -1,0 +1,25 @@
+name: AI PR Review
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize] # when PR is opened or new commits are pushed
+
+jobs:
+  trigger-ai-review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call external AI Review API
+        env:
+          REVIEW_API_URL: https://0pk89dks-2028.asse.devtunnels.ms/api/insight/review-pr
+          REVIEW_API_SECRET: NO_API_KEY_NEEDED_FOR_DEMO
+        run: |
+          echo "Triggering external AI PR review service..."
+          curl -X POST $REVIEW_API_URL \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: $REVIEW_API_SECRET" \
+            -d '{
+              "owner": "${{ github.repository_owner }}",
+              "repo": "${{ github.event.repository.name }}",
+              "prNumber": ${{ github.event.pull_request.number }}
+            }'
