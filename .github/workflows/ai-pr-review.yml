@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Call external AI Review API
         env:
-          REVIEW_API_URL: https://894ab1b9b167.ngrok-free.app/api/v1/insight/review-pr
+          REVIEW_API_URL: https://prsinsight.mahabubsany.com/api/v1/insight/review-pr
           REVIEW_API_SECRET: NO_API_KEY_NEEDED_FOR_DEMO
         run: |
           echo "Triggering external AI PR review service..."
