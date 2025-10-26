@@ -1,7 +1,7 @@
 import '@/app';
-import { server } from '@/libs/initiateServer';
 import { config } from '@/configs';
 import logger from '@/configs/loggerConfig';
+import { server } from '@/libs/initiateServer';
 
 const serverInstance = server.listen(config.PORT, async () => {
   logger.info(`Server running on port ${config.PORT}`);
@@ -10,7 +10,7 @@ const serverInstance = server.listen(config.PORT, async () => {
 process.on('SIGINT', () => {
   serverInstance.close(async () => {
     logger.warn('SIGINT | Process terminated');
-    process.exit(0);
+    process.exit(0;
   });
 });
 
