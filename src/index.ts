@@ -10,7 +10,7 @@ const serverInstance = server.listen(config.PORT, async () => {
 process.on('SIGINT', () => {
   serverInstance.close(async () => {
     logger.warn('SIGINT | Process terminated');
-    process.exit(0;
+    process.exit(0);
   });
 });
 
